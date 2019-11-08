@@ -1,4 +1,4 @@
-package com.clinbrain.common.dataSource;
+package com.lig.common.dataSource;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;

@@ -1,7 +1,7 @@
-package com.clinbrain.dao;
+package com.lig.dao;
 
-import com.clinbrain.common.mapper.MyMapper;
-import com.clinbrain.common.pojo.CdrEntity;
+import com.lig.common.mapper.MyMapper;
+import com.lig.common.pojo.CdrEntity;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.clinbrain.common.dataSource;
+package com.lig.common.dataSource;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;

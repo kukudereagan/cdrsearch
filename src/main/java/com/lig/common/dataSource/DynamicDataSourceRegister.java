@@ -1,4 +1,4 @@
-package com.clinbrain.common.dataSource;
+package com.lig.common.dataSource;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.slf4j.Logger;

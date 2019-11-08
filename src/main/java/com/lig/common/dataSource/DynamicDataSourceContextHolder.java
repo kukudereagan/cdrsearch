@@ -1,4 +1,4 @@
-package com.clinbrain.common.dataSource;
+package com.lig.common.dataSource;
 
 import java.util.ArrayList;
 import java.util.List;

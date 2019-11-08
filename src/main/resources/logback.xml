@@ -49,10 +49,10 @@
     <root level="debug">
         <appender-ref ref="STDOUT" />
     </root>
-    <logger name="com.clinbrain" level="info" >
+    <logger name="com.lig" level="info" >
         <appender-ref ref="baselog" />
     </logger>
-    <logger name="com.clinbrain" level="ERROR" additivty="true">
+    <logger name="com.lig" level="ERROR" additivty="true">
         <appender-ref ref="ALL-ERROR"/>
     </logger>
 </configuration>

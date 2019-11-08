@@ -305,7 +305,7 @@
                     </dependency>
                     <!--GP-->
                     <!--<dependency>
-                        <groupId>com.clinbrain.greenplum</groupId>
+                        <groupId>com.lig.greenplum</groupId>
                         <artifactId>greenplum-jdbc</artifactId>
                         <version>5.1.4</version>
                     </dependency>-->

@@ -1,4 +1,4 @@
-package com.clinbrain.common.pojo;
+package com.lig.common.pojo;
 
 import com.jcraft.jsch.UserInfo;
 

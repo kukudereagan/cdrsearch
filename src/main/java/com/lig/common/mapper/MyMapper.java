@@ -1,4 +1,4 @@
-package com.clinbrain.common.mapper;
+package com.lig.common.mapper;
 
 import tk.mybatis.mapper.common.Mapper;
 

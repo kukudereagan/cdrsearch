@@ -1,6 +1,6 @@
-package com.clinbrain;
+package com.lig;
 
-import com.clinbrain.common.dataSource.DynamicDataSourceRegister;
+import com.lig.common.dataSource.DynamicDataSourceRegister;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,7 +12,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 
 @EnableTransactionManagement//启用事物
-@MapperScan(basePackages="com.clinbrain.dao")// 扫描mapper
+@MapperScan(basePackages="com.lig.dao")// 扫描mapper
 @EnableConfigurationProperties
 @ImportAutoConfiguration(DynamicDataSourceRegister.class)//启动注入
 @SpringBootApplication

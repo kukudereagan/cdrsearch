@@ -1,4 +1,4 @@
-package com.clinbrain.common.dataSource;
+package com.lig.common.dataSource;
 
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 

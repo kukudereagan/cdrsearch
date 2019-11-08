@@ -1,11 +1,10 @@
-package com.clinbrain.service;
+package com.lig.service;
 
-import com.clinbrain.common.dataSource.TargetDataSource;
-import com.clinbrain.common.pojo.CdrData;
-import com.clinbrain.common.pojo.CdrEntity;
-import com.clinbrain.common.pojo.HeaderData;
-import com.clinbrain.dao.CdrDataMapper;
-import com.clinbrain.dao.CdrTreeMapper;
+import com.lig.common.dataSource.TargetDataSource;
+import com.lig.common.pojo.CdrEntity;
+import com.lig.common.pojo.HeaderData;
+import com.lig.dao.CdrDataMapper;
+import com.lig.dao.CdrTreeMapper;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.apache.commons.lang3.StringUtils;

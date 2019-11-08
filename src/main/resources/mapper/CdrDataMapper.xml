@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.clinbrain.dao.CdrDataMapper">
-  <resultMap id="BaseResultMap" type="com.clinbrain.common.pojo.HeaderData">
+<mapper namespace="com.lig.dao.CdrDataMapper">
+  <resultMap id="BaseResultMap" type="com.lig.common.pojo.HeaderData">
     <result column="label" jdbcType="VARCHAR" property="label" />
     <result column="prop" jdbcType="VARCHAR" property="prop" />
   </resultMap>

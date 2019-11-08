@@ -1,4 +1,4 @@
-package com.clinbrain.common.dataSource;
+package com.lig.common.dataSource;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
