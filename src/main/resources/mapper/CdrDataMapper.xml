@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.clinbrain.dao.CdrDataMapper">
+  <resultMap id="BaseResultMap" type="com.clinbrain.common.pojo.HeaderData">
+    <result column="label" jdbcType="VARCHAR" property="label" />
+    <result column="prop" jdbcType="VARCHAR" property="prop" />
+  </resultMap>
+  <select id="listData" resultType="java.util.HashMap">
+    select
+        ${col}
+    from
+        ${tb}
+    where  1=1
+    <if test="filter!=null and filter!=''">
+      and ${filter}
+    </if>
+  </select>
+  <select id="listColumns" resultMap="BaseResultMap">
+    select description label,a.attname prop
+    from pg_attribute as a
+      INNER JOIN pg_class AS c ON a.attrelid = c.oid
+      INNER JOIN pg_tables AS T ON c.relname = T.TABLENAME
+      left join pg_description as s on s.objsubid = a.attnum  AND s.description NOT LIKE'扩展%'
+      and s.objoid = c.oid
+      where T.TABLENAME= #{tb} and attstattarget=-1
+  </select>
+  <select id="selectCol" resultType="String">
+     SELECT
+      array_to_string( ARRAY ( SELECT UNNEST ( ARRAY_AGG ( NAME ))), ',' ) aaa
+    FROM
+      (
+      select
+        a.attname as name
+      from pg_attribute as a
+      INNER JOIN pg_class AS c ON a.attrelid = c.oid
+      INNER JOIN pg_tables AS T ON c.relname = T.TABLENAME
+      left join pg_description as s on s.objsubid = a.attnum  AND s.description NOT LIKE'扩展%'
+      and s.objoid = c.oid
+      where T.TABLENAME= #{tb} and attstattarget=-1
+      ) A
+  </select>
+</mapper>

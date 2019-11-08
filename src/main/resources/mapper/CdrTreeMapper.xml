@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.clinbrain.dao.CdrTreeMapper">
+  <resultMap id="CdrEntityResultMap" type="com.clinbrain.common.pojo.CdrEntity">
+    <result column="name" jdbcType="VARCHAR" property="name" />
+  </resultMap>
+  <select id="listDomain" resultMap="CdrEntityResultMap">
+    select
+	  split_part(tablename,'_',1) name
+    from
+        pg_tables
+    where schemaname = 'public' and position('_' in tablename)>0
+    group by split_part(tablename,'_',1) order by split_part(tablename,'_',1)
+  </select>
+  <select id="listTbByDomain" resultMap="CdrEntityResultMap">
+    select tablename name from pg_tables
+    where tablename like #{tb} ||'!_%' ESCAPE '!'
+      and schemaname = 'public'
+      and tablename not like '%prt%'
+    order by tablename
+  </select>
+  <select id="listColumnsByTb" resultMap="CdrEntityResultMap">
+    select attname name from pg_attribute as a
+      INNER JOIN pg_class AS c ON a.attrelid = c.oid
+      INNER JOIN pg_tables AS T ON c.relname = T.TABLENAME
+    where T.TABLENAME=#{tb} and attstattarget=-1
+  </select>
+</mapper>
