@@ -21,7 +21,7 @@
         <webVersion>3.1</webVersion>
         <mybatis.spring.version>1.2.4</mybatis.spring.version>
         <fastjson.version>1.2.45</fastjson.version>
-        <quartz.version>2.3.0</quartz.version>
+        <quartz.version>2.3.2</quartz.version>
         <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.0.4</thymeleaf-layout-dialect.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
